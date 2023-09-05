@@ -8,7 +8,7 @@ const Pokedex = (props) => {
         <h1>Pokedex</h1>
         <div>Pagination</div>
       </div>
-      <div>
+      <div className="">
         {pokemons.map((pokemon, id) => {
           return <PokemonCard key={pokemon.name} pokemon={pokemon} />;
         })}
