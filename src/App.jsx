@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import "./index.css";
 import { getPokemonData, getPokemons } from "./api/pokemonAPI";
@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="">
+    <div className="font-link">
       <SearchBar></SearchBar>
 
       <Pokedex pokemons={pokemons}></Pokedex>
