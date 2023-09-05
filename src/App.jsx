@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="font-link">
+    <div className="font-link container mx-auto">
       <SearchBar></SearchBar>
 
       <Pokedex pokemons={pokemons}></Pokedex>
