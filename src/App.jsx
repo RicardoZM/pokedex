@@ -16,7 +16,6 @@ function App() {
         return await getPokemonData(pokemon.url);
       });
       const results = await Promise.all(promises);
-      console.log(results);
       setPokemons(results);
     } catch (error) {}
   };

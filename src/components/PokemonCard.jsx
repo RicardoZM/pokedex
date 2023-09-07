@@ -13,11 +13,17 @@ export const PokemonCard = (props) => {
             src={pokemon.sprites.front_default}
             alt={pokemon.name}
           />
-
           <h3 className="uppercase absolute inset-y-0 right-5 top-10 ">
             {pokemon.name}
           </h3>
           <div className="absolute top-0 right-3">#{pokemon.id}</div>
+          {pokemon.types.map((type) => {
+            return (
+              <div className="inline-grid grid-cols-2" key={type.type.name}>
+                <h2 className="">{type.type.name}</h2>
+              </div>
+            );
+          })}
         </div>
       </div>
     </Atropos>

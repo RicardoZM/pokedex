@@ -15,7 +15,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex justify-center p-7">
+    <form className="flex justify-center p-7">
       <input
         type="search"
         className="shadow rounded border-0 p-3 w-full"
@@ -35,7 +35,7 @@ const SearchBar = () => {
           d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
         />
       </svg> */}
-    </div>
+    </form>
   );
 };
 export default SearchBar;
