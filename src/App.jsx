@@ -3,6 +3,7 @@ import SearchBar from "./components/SearchBar";
 import "./index.css";
 import { getPokemonData, getPokemons } from "./api/pokemonAPI";
 import Pokedex from "./components/Pokedex";
+import "atropos/css";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
