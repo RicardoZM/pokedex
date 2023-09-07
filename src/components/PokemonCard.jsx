@@ -1,6 +1,7 @@
 import Atropos from "atropos/react";
 import "../index.css";
 import "atropos/css";
+import * as utilidades from "../utils/utils.js";
 
 export const PokemonCard = (props) => {
   const { pokemon } = props;
@@ -20,7 +21,13 @@ export const PokemonCard = (props) => {
           {pokemon.types.map((type) => {
             return (
               <div className="inline-grid grid-cols-2" key={type.type.name}>
-                <h2 className="">{type.type.name}</h2>
+                <h2
+                  className={`${utilidades.devolverColor(
+                    type.type.name
+                  )} rounded`}
+                >
+                  {type.type.name}
+                </h2>
               </div>
             );
           })}
