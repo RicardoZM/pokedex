@@ -4,6 +4,7 @@ import "./index.css";
 import { getPokemonData, getPokemons } from "./api/pokemonAPI";
 import Pokedex from "./components/Pokedex";
 import "atropos/css";
+import { Logo } from "./components/Logo";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="font-link container mx-auto">
+      <Logo></Logo>
       <SearchBar></SearchBar>
 
       <Pokedex pokemons={pokemons}></Pokedex>
