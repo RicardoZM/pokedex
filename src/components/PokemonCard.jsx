@@ -24,7 +24,7 @@ export const PokemonCard = (props) => {
                 <h2
                   className={`${utilidades.devolverColor(
                     type.type.name
-                  )} rounded`}
+                  )} text-white py-2 px-4 rounded-full `}
                 >
                   {type.type.name}
                 </h2>
