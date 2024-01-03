@@ -40,7 +40,7 @@ function App() {
         page={page}
         setPage={setPage}
         total={total}
-      ></Pokedex>
+      />
     </div>
   );
 }
