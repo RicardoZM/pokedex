@@ -9,26 +9,38 @@ import { Logo } from "./components/Logo";
 function App() {
   const [pokemons, setPokemons] = useState([]);
 
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+
   const fetchPokemons = async () => {
     try {
-      const data = await getPokemons();
+      setLoading(true);
+      const data = await getPokemons(25, 25 * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
       });
       const results = await Promise.all(promises);
       setPokemons(results);
+      setLoading(false);
+      setTotal(Math.ceil(data.count / 25));
     } catch (error) {}
   };
   useEffect(() => {
     fetchPokemons();
-  }, []);
+  }, [page]);
 
   return (
     <div className="font-link container mx-auto">
       <Logo></Logo>
-      <SearchBar></SearchBar>
-
-      <Pokedex pokemons={pokemons}></Pokedex>
+      <SearchBar />
+      <Pokedex
+        loading={loading}
+        pokemons={pokemons}
+        page={page}
+        setPage={setPage}
+        total={total}
+      ></Pokedex>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 export function devolverColor(tipo) {
-  console.log(tipo);
+  /* console.log(tipo); */
   let tipoColor;
   switch (tipo) {
     case "normal":
