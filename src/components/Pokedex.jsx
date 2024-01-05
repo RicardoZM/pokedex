@@ -17,24 +17,24 @@ const Pokedex = (props) => {
   return (
     <div>
       <div className="header">
-        <h1>Pokedex </h1>
-        <Pagination
+      </div>
+      {loading ? (
+        <div className="loader"></div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pokemons.map((pokemon) => {
+            return <PokemonCard key={pokemon.name} pokemon={pokemon} />;
+          })}
+        </div>
+      )}
+              <Pagination
           page={page + 1}
           totalPages={total}
           onLeftClick={lastPage}
           onRightClick={nextPage}
         />
-      </div>
-      {loading ? (
-        <div className="loader"></div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pokemons.map((pokemon, id) => {
-            return <PokemonCard key={pokemon.name} pokemon={pokemon} />;
-          })}
-        </div>
-      )}
     </div>
+    
   );
 };
 export default Pokedex;

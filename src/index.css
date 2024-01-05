@@ -11,6 +11,10 @@
     height: 160px;
   }
 
+  body {
+    background-color: rgb(55 65 81);
+ }
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;

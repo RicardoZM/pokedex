@@ -7,8 +7,7 @@ export const PokemonCard = (props) => {
   const { pokemon } = props;
   return (
     <Atropos shadow={false} className="my-atropos">
-      <div className="rounded-md shadow-lg">
-        <div className="relative items-center">
+      <div className="border rounded-md shadow-lg ">
           <img
             className=""
             src={pokemon.sprites.front_default}
@@ -20,18 +19,17 @@ export const PokemonCard = (props) => {
           <div className="absolute top-0 right-3">#{pokemon.id}</div>
           {pokemon.types.map((type) => {
             return (
-              <div className="inline-grid grid-cols-2" key={type.type.name}>
+              <div className="inline-flex" key={type.type.name}>
                 <h2
                   className={`${utilidades.devolverColor(
                     type.type.name
-                  )} text-white py-2 px-4 rounded-full `}
+                  )} text-white py-2 px-4 rounded-full bottom-10`}
                 >
                   {type.type.name}
                 </h2>
               </div>
             );
           })}
-        </div>
       </div>
     </Atropos>
   );
