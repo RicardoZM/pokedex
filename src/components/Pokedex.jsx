@@ -15,9 +15,7 @@ const Pokedex = (props) => {
   };
 
   return (
-    <div>
-      <div className="header">
-      </div>
+    <main className="container mx-auto">
       {loading ? (
         <div className="loader"></div>
       ) : (
@@ -33,7 +31,7 @@ const Pokedex = (props) => {
           onLeftClick={lastPage}
           onRightClick={nextPage}
         />
-    </div>
+    </main>
     
   );
 };

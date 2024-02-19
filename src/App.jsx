@@ -32,9 +32,9 @@ function App() {
 
   return (
     
-      <div className="font-link container mx-auto dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+      <div className="">
         <Logo></Logo>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <Pokedex
           loading={loading}
           pokemons={pokemons}
@@ -42,6 +42,7 @@ function App() {
           setPage={setPage}
           total={total}
         />
+  
       </div>
   );
 }
